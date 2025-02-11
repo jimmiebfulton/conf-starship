@@ -18,7 +18,7 @@
 
 # ---------------------------------------------------------------
 format = """
-[█](#2e3440)\
+[░▒▓](#2e3440)\
 $os\
 $username\
 [](bg:#3b4252 fg:#2e3440)\
@@ -44,8 +44,8 @@ $docker_context\
 [](fg:#5e81ac bg:#6272a4)\
 $time\
 [ ](fg:#6272a4)\
-$cmd_duration\
 \n
+$cmd_duration\
 $character\
 """
 #add_newline = false
@@ -57,32 +57,12 @@ disabled = false
 show_always = true
 style_user = "bg:#2e3440"
 style_root = "bg:#9A348E"
-format = '[ $user ]($style)'
+format = '[ $user ]($style)'
 disabled = false
 
 [os]
-style = "bg:#2e3440"
-disabled = false     # Disabled by default
-
-[os.symbols]
-Windows = "󰍲"
-Ubuntu = "󰕈"
-SUSE = ""
-Raspbian = "󰐿"
-Mint = "󰣭"
-Macos = "󰀵"
-Manjaro = ""
-Linux = "󰌽"
-Gentoo = "󰣨"
-Fedora = "󰣛"
-Alpine = ""
-Amazon = ""
-Android = ""
-Arch = "󰣇"
-CentOS = ""
-Debian = "󰣚"
-Redhat = "󱄛"
-RedHatEnterprise = "󱄛"
+style = "bg:#9A348E"
+disabled = true      # Disabled by default
 
 [directory]
 style = "bg:#3b4252"
@@ -176,12 +156,11 @@ time_format = "%R"             # Hour:Minute Format
 style = "bg:#6272a4"
 format = '[  $time ]($style)'
 
-[cmd_duration]
-min_time = 500
-format = '[$duration](#6272a4)'
-
 [character]
-disabled = true
 success_symbol = '[ ➜](#6272a4)'
 error_symbol = '[ ➜](bold red)'
 #style = "bg:#6272a4"
+
+[cmd_duration]
+min_time = 500
+format = ' [$duration](#6272a4)'

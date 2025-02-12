@@ -109,7 +109,7 @@ format = '[ $symbol ($version) ]($style)'
 [docker_context]
 symbol = " "
 style = "bg:#5e81ac"
-format = '[ $symbol $context ]($style) $path'
+format = '[ $symbol $context]($style)$path'
 
 [elixir]
 symbol = " "
